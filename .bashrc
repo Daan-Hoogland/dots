@@ -7,22 +7,6 @@
 
 PS1="\[\e[95m\]\w\[\e[0m\] "
 
-#function _update_ps1() {
-#     PS1="$(~/.config/powerline-shell/powerline-shell.py $? 2> /dev/null)"
-#}
-
-#if [ "$TERM" != "linux" ]; then
-#    PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
-#fi
-
-#powerline-daemon -q
-#POWERLINE_BASH_CONTINUATION=1
-#POWERLINE_BASH_SELECT=1
-#. /usr/lib/python3.6/site-packages/powerline/bindings/bash/powerline.sh
-
-#(wal -r &)
-
-#setsid wal -r
 
 if [ ! -S ~/.ssh/ssh_auth_sock ]; then
   eval `ssh-agent` > /dev/null
@@ -30,8 +14,6 @@ if [ ! -S ~/.ssh/ssh_auth_sock ]; then
 fi
 export SSH_AUTH_SOCK=~/.ssh/ssh_auth_sock
 ssh-add -l > /dev/null || ssh-add > /dev/null
-
-[ -n "$XTERM_VERSION" ] && transset-df 0.9 --id "$WINDOWID" >/dev/null
 
 
 alias grep="grep --color=auto"
