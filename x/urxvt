@@ -1,0 +1,21 @@
+! fonts
+URxvt.font: -t-cherry-medium-r-normal--10-100-75-75-c-100-iso8859-1
+URxvt.boldFont: -t-cherry-medium-r-normal--10-100-75-75-c-100-iso8859-1
+
+! settings
+URxvt.scrollBar: 0
+URxvt.internalBorder: 20
+URxvt.geometry: 70x30
+
+! extensions
+URxvt.perl-ext-common: default,matcher,selection-to-clipboard
+URxvt.url-launcher: chromium
+URxvt.matcher.rend.0: Uline fg13
+URxvt.matcher.button: 1
+
+URxvt.keysym.Control-Up:     \033[1;5A
+URxvt.keysym.Control-Down:   \033[1;5B
+URxvt.keysym.Control-Left:   \033[1;5D
+URxvt.keysym.Control-Right:  \033[1;5C
+
+! vim: ft=xdefaults

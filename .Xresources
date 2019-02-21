@@ -1,0 +1,3 @@
+#include ".config/x/colors"
+#include ".config/x/rofi"
+#include ".config/x/urxvt"

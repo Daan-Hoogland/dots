@@ -1,0 +1,27 @@
+! ------------------------------------------------------------------------------
+! General color settings for i3 & UXTerm
+! ------------------------------------------------------------------------------
+
+*background: #1D2426
+*foreground: #8FA388
+*foreground-alt: #AB9C71
+*border: #8FA388
+
+*cursorColor: #BE5E1E
+
+*color0:  #374649
+*color1:  #3D6446
+*color2:  #798348
+*color3:  #9C6A45
+*color4:  #3C5950
+*color5:  #BA9349
+*color6:  #5D7A6A
+*color7:  #987E5E
+*color8:  #4B5F63
+*color9:  #B1744F
+*color10: #879250
+*color11: #B06B40
+*color12: #567B6F
+*color13: #D79E55
+*color14: #668675
+*color15: #AC9D72
