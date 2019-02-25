@@ -6,14 +6,17 @@
 ;=====================================================
 [colors]
 ; Background of bar
-;background = ${xrdb:background}
-background = #CC1D2426
+background = ${xrdb:background-transparent}
+
 ; Background of focussed item
 background-alt = ${xrdb:foreground}
+
 ; Text color
 foreground = ${xrdb:foreground}
+
 ; Border of bar
 border = ${xrdb:border}
+
 ; Alert color
 alert = ${xrdb:color11}
 

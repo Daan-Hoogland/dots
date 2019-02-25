@@ -10,7 +10,7 @@ ln -s $PWD/polybar $CONFIG_HOME
 ln -s $PWD/dunst $CONFIG_HOME
 ln -s $PWD/nitrogen $CONFIG_HOME
 ln -s $PWD/x $CONFIG_HOME
-ln -s $PWD/compton.conf $CONFIG_HOME
+ln -s $PWD/compton/compton.conf $CONFIG_HOME
 
 
 echo "Creating general symlinks..."
