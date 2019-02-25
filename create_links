@@ -1,18 +1,21 @@
 #!/bin/bash
 
-echo "Creating application symlinks..." 
+CONFIG_HOME="${HOME}/.config/"
+
+echo "Creating application symlinks..."
+
 # application specific configuration
-ln -s i3/ $HOME/.config/i3
-ln -s polybar/ $HOME/.config/polybar
-ln -s dunst/ $HOME/.config/dunst
-ln -s nitrogen/ $HOME/.config/nitrogen
-ln -s x/ $HOME/.config/x
-ln -s compton.conf $HOME/.config/compton.conf
+ln -s $PWD/i3 $CONFIG_HOME
+ln -s $PWD/polybar $CONFIG_HOME
+ln -s $PWD/dunst $CONFIG_HOME
+ln -s $PWD/nitrogen $CONFIG_HOME
+ln -s $PWD/x $CONFIG_HOME
+ln -s $PWD/compton.conf $CONFIG_HOME
 
 
 echo "Creating general symlinks..."
 # general configuration
-ln -s .Xresources $HOME/.Xresources
-ln -s .bashrc $HOME/.bashrc
-ln -s .bash_profile $HOME./bash_profile
+ln -s $PWD/.Xresources $HOME
+ln -s $PWD/.bashrc $HOME
+ln -s $PWD/.bash_profile $HOME
 

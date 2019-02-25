@@ -3,6 +3,7 @@
 ! ------------------------------------------------------------------------------
 
 *background: #1D2426
+*background-transparent: #CC1D2426
 *foreground: #8FA388
 *foreground-alt: #AB9C71
 *border: #8FA388

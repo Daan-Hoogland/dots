@@ -217,7 +217,7 @@ gaps outer 3
 
 # Startup apps
 exec --no-startup-id nitrogen --restore
-exec_always pkill -9 polybar ; ~/.config/polybar/scripts/polybar.sh
+exec_always pkill -9 polybar ; ~/.config/polybar/init.sh
 exec compton -f --config ~/.config/compton.conf
 exec_always pkill -9 dunst ; --no-startup-id dunst
 

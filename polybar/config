@@ -32,9 +32,6 @@ fixed-center = true
 background = ${colors.background}
 foreground = ${colors.foreground}
 
-;line-size = 3
-;line-color = #f00
-
 border-size = 0
 border-color = ${colors.border}
 
@@ -68,16 +65,11 @@ wm-restack = i3
 monitor = ${env:MONITOR:HDMI-1}
 width = 100%
 height = 20
-;offset-x = 1%
-;offset-y = 1%
 radius = 0.0
 fixed-center = true
 
 background = ${colors.background}
 foreground = ${colors.foreground}
-
-;line-size = 3
-;line-color = #f00
 
 border-size = 0
 border-color = ${colors.border}
@@ -92,8 +84,8 @@ font-0 = "t cherry Wide:style=Regular:size=10:antialias=false"
 font-1 = "Wuncon Siji:style=Regular:size=10:antialias=false"
 
 modules-left = i3
-modules-center =
-modules-right = battery date powermenu
+modules-center = date
+modules-right = vpn-openvpn-isrunning network wired-network
 
 ;wm-restack = i3
 
@@ -240,7 +232,7 @@ label = %time%%date%
 type = custom/script
 tail = true
 label = "%output%"
-exec = ~/.config/polybar/pavolume.sh --listen
+exec = ~/.config/polybar/scripts/pavolume.sh --listen
 click-left = amixer -D pulse sset Master toggle
 click-right = exec pavucontrol &
 scroll-up = amixer -D pulse sset Master 2%+
