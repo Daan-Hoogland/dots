@@ -154,7 +154,12 @@ modules-left =
 modules-right = spacer closepowermenubar
 
 
-
+;=====================================================
+;
+;   Module responsible for showing i3 workspace
+;	index.
+;
+;=====================================================
 [module/i3index]
 type = internal/i3
 format = <label-state>
@@ -235,7 +240,7 @@ label = %time%%date%
 type = custom/script
 tail = true
 label = "%output%"
-exec = ~/.config/polybar/scripts/pavolume.sh --listen
+exec = ~/.config/polybar/pavolume.sh --listen
 click-left = amixer -D pulse sset Master toggle
 click-right = exec pavucontrol &
 scroll-up = amixer -D pulse sset Master 2%+
@@ -298,11 +303,6 @@ animation-charging-9 = %{F#AB9C71} %{F-}
 animation-charging-framerate = 600
 animation-charging-active-font = 2
 
-[module/toggletray]
-type custom/text
-content = 
-click-left = "polybar tray"
-
 
 
 ;=====================================================
@@ -325,14 +325,18 @@ format-connected = %{F#AB9C71}%{F-}
 [module/network]
 type = internal/network
 interface = wlp7s0
-format-connected = %{F#AB9C71}%{F-} <label-connected>
-format-disconnected = <label-disconnected>
+format-connected = %{F#AB9C71}<ramp-signal>%{F-} <label-connected>
+;format-disconnected = <label-disconnected>
+
+ramp-signal-0=
+ramp-signal-1=
+ramp-signal-2=
 
 label-connected = %essid:0:15:...%
 label-connected-foreground = ${colors.foreground}
 format-connected-foreground = ${colors.foreground}
 
-label-disconnected = %{F#AB9C71}%{F-}
+;label-disconnected = %{F#AB9C71}%{F-}
 label-disconnected-foreground = ${colors.foreground}
 format-disconnected-foreground = ${colors.foreground}
 
@@ -347,34 +351,6 @@ format-disconnected-foreground = ${colors.foreground}
 type = custom/script
 exec = ~/.config/polybar/scripts/vpn-openvpn-isrunning.sh
 interval = 5
-
-[module/powermenu]
-type = custom/menu
-
-format-spacing = 1
-
-label-open = >
-label-close = x
-label-separator = |
-label-separator-foreground = ${colors.foreground}
-
-menu-0-0 = reboot
-menu-0-0-exec = menu-open-1
-menu-0-1 = power off
-menu-0-1-exec = menu-open-2
-menu-0-2 = lock
-menu-0-2-exec = ~/.customization/lock.sh
-
-
-menu-1-0 = cancel
-menu-1-0-exec = menu-open-0
-menu-1-1 = reboot
-menu-1-1-exec = reboot
-
-menu-2-0 = cancel
-menu-2-0-exec = menu-open-0
-menu-2-1 = power off
-menu-2-1-exec = poweroff
 
 
 
@@ -408,7 +384,7 @@ throttle-input-for = 30
 ;=====================================================
 [module/powermenubarlauncher]
 type = custom/text
-content = " %{F#AB9C71}v%{F-} "
+content = " %{F#AB9C71}%{F-} "
 click-left = polybar powermenubar
 
 
@@ -432,7 +408,6 @@ border-color = ${colors.border}
 
 offset-x = 1590
 offset-y = 25
-tray-position = left
 
 padding = 3
 module-margin = 2
@@ -456,7 +431,7 @@ wm-restack = true
 [module/lock]
 type = custom/text
 content = "%{F#AB9C71} %{F-}lock"
-click-left = "pkill -n polybar ; sh ~/.config/i3/scripts/lock.sh"
+click-left = "pkill -n polybar ; sh ~/.config/i3/lock.sh"
 
 [module/logout]
 type = custom/text
