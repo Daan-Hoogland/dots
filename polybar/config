@@ -41,6 +41,8 @@ padding-right = 2
 module-margin-left = 1
 module-margin-right = 1
 
+tray-position=right
+tray-background = ${colors.background}
 
 font-0 = "t cherry Wide:style=Regular:size=10:antialias=false"
 font-1 = "Wuncon Siji:style=Regular:size=10:antialias=false"
@@ -83,6 +85,9 @@ module-margin-right = 2
 font-0 = "t cherry Wide:style=Regular:size=10:antialias=false"
 font-1 = "Wuncon Siji:style=Regular:size=10:antialias=false"
 
+tray-position=right
+tray-background = ${colors.background}
+
 modules-left = i3
 modules-center = date
 modules-right = vpn-openvpn-isrunning network wired-network
@@ -94,56 +99,6 @@ modules-right = vpn-openvpn-isrunning network wired-network
 ;scroll-up = i3wm-wsnext
 ;scroll-down = i3wm-wsprev
 
-
-
-;=====================================================
-;
-;   Small spaced used to seperate icons
-;	from one another.
-;
-;=====================================================
-[module/spacer]
-type = custom/text
-content = |
-content-foreground = ${colors.foreground}
-content-padding=1
-
-
-
-;=====================================================
-;
-;   Bar used to display the tray.
-;
-;=====================================================
-[bar/tray]
-monitor = ${env:MONITOR:eDP-1}
-width = 10%
-height = 20
-radius = 0
-bottom = true
-
-background = ${colors.background}
-foreground = ${colors.foreground}
-
-border-size = 1
-border-color = ${colors.border}
-
-offset-x = 1727
-offset-y = 1
-
-padding-left = 2
-padding-right = 2
-tray-detached = true
-override-redirect = true
-wm-restack = true
-
-font-0 = "t cherry Wide:style=Regular:size=10:antialias=false"
-font-1 = "Wuncon Siji:style=Regular:size=10:antialias=false"
-
-tray-position = center
-
-modules-left =
-modules-right = spacer closepowermenubar
 
 
 ;=====================================================
@@ -181,7 +136,7 @@ wrapping-scroll = false
 ws-icon-default = 
 ws-icon-default-font = 2
 ; Only show workspaces on the same output as the bar
-pin-workspaces = true
+pin-workspaces = false
 
 label-mode-padding = 0
 label-mode-foreground = ${colors.foreground}
