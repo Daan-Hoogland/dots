@@ -86,7 +86,7 @@ module-margin-left = 1
 module-margin-right = 2
 
 font-0 = "t cherry Wide:style=Regular:size=10:antialias=false"
-font-1 = "Wuncon Siji:style=Regular:size=10:antialias=false"
+font-1 = "Siji:style=Regular:size=10:antialias=false"
 
 tray-position=right
 tray-background = ${colors.background}
