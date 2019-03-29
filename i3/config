@@ -224,4 +224,5 @@ exec_always pkill -9 dunst ; --no-startup-id dunst
 for_window [class="Steam"] floating enable
 for_window [class="xarchiver"] floating enable
 for_window [class="Pinentry"] floating enable
+for_window [class="sun-awt-X11-XDialogPeer"] floating enable
 for_window [class="(?i)spotify"] move container to workspace $ws12
