@@ -1,9 +1,7 @@
 #!/bin/sh
 
-if [ "$(systemctl | grep openvpn | grep running)" ]; then
-	echo "stopping"
-    sudo nordvpn stop
+if [ "$(nordvpn status | grep Connected)" ]; then
+    nordvpn disconnect
 else
-	echo "starting"
-    sudo nordvpn start
+    nordvpn connect
 fi

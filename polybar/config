@@ -299,8 +299,10 @@ format-disconnected-foreground = ${colors.foreground}
 ;=====================================================
 [module/vpn-openvpn-isrunning]
 type = custom/script
-exec = ~/.config/polybar/scripts/vpn-openvpn-isrunning.sh
+exec = ~/.config/polybar/scripts/nordvpn-isrunning.sh
 interval = 5
+
+click-left=~/.config/polybar/scripts/toggle-vpn.sh
 
 
 
