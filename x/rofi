@@ -8,6 +8,6 @@ rofi.color-active: #39474a, #8fa388, #3e5951, #5d796a, #8fa388
 rofi.color-urgent: #986345, #8fa388, #9b6a46, #9d8568, #8fa388
 rofi.lines: 5
 rofi.font: t cherry Wide 7
-rofi.width: 15
+rofi.width: 300
 rofi.separator-style: none
 rofi.scrollbar-width: 3
