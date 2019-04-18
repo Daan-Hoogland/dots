@@ -24,3 +24,9 @@ alias uptime="uptime -p"
 alias free="free -h"
 alias vpn-start="sudo nordvpn start"
 alias vpn-stop="sudo nordvpn stop"
+alias gotop="gotop -p"
+alias yay="yay --mflags \"--nocheck\""
+
+if [ -f $HOME/.bw/session_key  ]; then
+    source $HOME/.bw/session_key
+fi

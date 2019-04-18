@@ -5,7 +5,7 @@ CONFIG_HOME="${HOME}/.config/"
 echo "Creating application symlinks..."
 
 # application specific configuration
-ln -s $PWD/i3 $CONFIG_HOME
+ln -sf $PWD/i3 $CONFIG_HOME
 ln -s $PWD/polybar $CONFIG_HOME
 ln -s $PWD/dunst $CONFIG_HOME
 ln -s $PWD/nitrogen $CONFIG_HOME

@@ -27,7 +27,7 @@ alert = ${xrdb:color11}
 ;
 ;=====================================================
 [bar/main]
-monitor = ${env:MONITOR:eDP-1}
+monitor = ${env:MONITOR:DP-2}
 width = 100%
 height = 20
 fixed-center = true
@@ -67,7 +67,7 @@ wm-restack = i3
 ;
 ;=====================================================
 [bar/secondary]
-monitor = ${env:MONITOR:HDMI-1}
+monitor = ${env:MONITOR:DP-1}
 width = 100%
 height = 20
 radius = 0.0
@@ -274,7 +274,7 @@ format-connected = %{F#AB9C71}%{F-}
 ;=====================================================
 [module/network]
 type = internal/network
-interface = wlp7s0
+interface = wlp6s0
 format-connected = %{F#AB9C71}<ramp-signal>%{F-} <label-connected>
 ;format-disconnected = <label-disconnected>
 
